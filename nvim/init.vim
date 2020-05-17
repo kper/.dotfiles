@@ -8,6 +8,8 @@ noremap :WQ :wq
 noremap :W  :w
 noremap :Q  :q
 
+imap jk <Esc>
+
 set nobackup
 set nowritebackup
 set noswapfile
@@ -29,6 +31,8 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf'
+Plug 'vimwiki/vimwiki' 
+Plug 'junegunn/limelight.vim'
 call plug#end()
 
 set undodir=~/.vimdid
@@ -118,4 +122,57 @@ set shortmess+=c
 " ctags
 
 autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+
+" nvim wiki
+let mapleader = "-"
+let g:vimwiki_list = [{'path': '/home/kper/Dropbox/Zettelkasten',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+" disable autocpl in goyo
+au BufReadPost,BufNewFile *.md CocDisable
+au BufReadPost,BufNewFile *.md CocDisable
+
+"autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+function! s:goyo_enter()
+  "set noshowmode
+  "set noshowcmd
+  "set ruler
+  "set scrolloff=999
+  Limelight
+  " ...
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+
+let g:goyo_width = 70
+
+function SplitInGoyo()
+	:Goyo 100
+	:VimwikiVSplitLink
+endfunction
+
+function ResetGoyo() 
+	:q
+	:Goyo 70
+endfunction
+
+autocmd FileType markdown nnoremap <F1> :VimwikiBacklinks<CR>
+"nnoremap <F2> :VimwikiSplitLink<CR>
+autocmd FileType markdown nnoremap <F2> :exec SplitInGoyo()<CR>
+autocmd FileType markdown nnoremap <F3> :execute ResetGoyo()<CR>
+
+
+" C Setup
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+
+augroup project
+  autocmd!
+  autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+augroup END
 
