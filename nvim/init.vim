@@ -33,6 +33,7 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf'
 Plug 'vimwiki/vimwiki' 
 Plug 'junegunn/limelight.vim'
+Plug 'qnighy/lalrpop.vim'
 call plug#end()
 
 set undodir=~/.vimdid
