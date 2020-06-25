@@ -205,5 +205,10 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+set statusline+=%F
 
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+
+" Explorer
+
+:nmap <space>e :CocCommand explorer<CR>
