@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/kper/rust/gehma_server/gehma_server/src'
+let g:netrw_dirhist_7='/home/kper/rust/PaenkoDb'
+let g:netrw_dirhist_6='/home/kper/rust/gehma_server/gehma_server'
+let g:netrw_dirhist_5='/home/kper/rust/gehma_server'
+let g:netrw_dirhist_4='/home/kper/rust'
+let g:netrw_dirhist_3='/home/kper/rust/gamlitz'
+let g:netrw_dirhist_2='/home/kper/rust/gehma_server/gehma_server/src'
+let g:netrw_dirhist_1='/home/kper/rust/gehma_server/gehma_server'
+let g:netrw_dirhist_0='/home/kper/rust/gehma_server'
+let g:netrw_dirhist_9='/home/kper/rust'
