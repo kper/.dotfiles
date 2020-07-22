@@ -213,3 +213,8 @@ nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Explorer
 
 :nmap <space>e :CocCommand explorer<CR>
+
+" Context plugin disable on startup
+
+let g:context_enabled = 0
+nnoremap <F1> :ContextToggle<CR>
