@@ -218,3 +218,6 @@ nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 
 let g:context_enabled = 0
 nnoremap <F1> :ContextToggle<CR>
+
+" Disable bell
+set visualbell
