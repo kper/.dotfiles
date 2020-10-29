@@ -222,3 +222,8 @@ nnoremap <F1> :ContextToggle<CR>
 
 " Disable bell
 set visualbell
+
+" vimtex flavor
+let g:tex_flavor = 'latex'
+
+
