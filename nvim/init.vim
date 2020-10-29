@@ -36,6 +36,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'qnighy/lalrpop.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'wellle/context.vim'
+Plug 'lervag/vimtex'
 call plug#end()
 
 set undodir=~/.vimdid
