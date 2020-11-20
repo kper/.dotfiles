@@ -37,6 +37,7 @@ Plug 'qnighy/lalrpop.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'wellle/context.vim'
 Plug 'lervag/vimtex'
+Plug 'ziglang/zig.vim'
 call plug#end()
 
 set undodir=~/.vimdid
