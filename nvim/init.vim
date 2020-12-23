@@ -21,14 +21,6 @@ Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'junegunn/goyo.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-"Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-"Plug 'ncm2/ncm2'
-"Plug 'roxma/nvim-yarp'
-"Plug 'ncm2/ncm2-bufword'
-"Plug 'ncm2/ncm2-path'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf'
 Plug 'vimwiki/vimwiki' 
@@ -38,6 +30,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'wellle/context.vim'
 Plug 'lervag/vimtex'
 Plug 'ziglang/zig.vim'
+Plug 'zefei/vim-wintabs'
+Plug 'zefei/vim-wintabs-powerline' "sudo apt-get install fonts-powerline
+Plug 'powerline/powerline'
 call plug#end()
 
 set undodir=~/.vimdid
@@ -227,4 +222,10 @@ set visualbell
 " vimtex flavor
 let g:tex_flavor = 'latex'
 
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|target'
 
+" buffer management
+
+map <C-A> <Plug>(wintabs_previous)
+map <C-S> <Plug>(wintabs_next)
+map <C-T>c <Plug>(wintabs_close)
